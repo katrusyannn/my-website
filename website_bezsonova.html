@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Page</title>
+</head>
+<body>
+
+    <table border="1" width="100%">
+        <!-- Заголовок сторінки -->
+        <tr>
+            <td colspan="2">
+                <h1>Welcome to the Student Information Page</h1>
+            </td>
+        </tr>
+
+        <!-- Ліва колонка -->
+        <tr>
+            <td width="30%">
+                <h2>Student Group</h2>
+                <p>This is the group of students in our brigade.</p>
+                <!-- Випадаючий список студентів -->
+                <label for="students">Select a student:</label>
+                <select id="students" name="students">
+                    <option value="student1">John Doe</option>
+                    <option value="student2">Jane Smith</option>
+                    <option value="student3">Alex Johnson</option>
+                </select>
+
+                <!-- Відносне гіперпосилання на розділ цієї ж сторінки -->
+                <p><a href="#book">Go to the Book Table</a></p>
+
+                <!-- Зображення (можна замінити відносним шляхом) -->
+                <p><img src="student.jpg" alt="Student Image" width="200"></p>
+            </td>
+
+            <!-- Основний контент -->
+            <td width="70%">
+                <h2>Physics Formula</h2>
+                <p>The most famous physics equation is <b>E=mc<sup>2</sup></b>, where:</p>
+                <ul>
+                    <li><b>E</b> - energy of the object</li>
+                    <li><i>m</i> - its mass</li>
+                    <li><b>c</b> - speed of light in vacuum, equals to 299 792 458 m/s</li>
+                </ul>
+
+                <!-- Таблиця змісту книги -->
+                <h2 id="book">Book Table of Contents</h2>
+                <table border="1" width="100%">
+                    <tr>
+                        <th>Chapter</th>
+                        <th>Page</th>
+                    </tr>
+                    <tr>
+                        <td>Introduction</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Chapter 1: The Basics</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Chapter 2: Advanced Topics</td>
+                        <td>25</td>
+                    </tr>
+                </table>
+
+                <!-- Форма введення даних про студента -->
+                <h2>Student Information Form</h2>
+                <form action="submit_student_info.html" method="post">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name"><br><br>
+
+                    <label for="age">Age:</label><br>
+                    <!-- Установка ограничений для возраста: от 0 до 120 лет -->
+                    <input type="number" id="age" name="age" min="0" max="120"><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+
+                    <label for="gender">Gender:</label><br>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br><br>
+
+                    <label for="comments">Comments:</label><br>
+                    <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </td>
+        </tr>
+
+        <!-- Нижній колонтитул -->
+        <tr>
+            <td colspan="2">
+                <p>&copy; 2024 Student Information Page. All rights reserved.</p>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
